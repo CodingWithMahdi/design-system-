@@ -1,26 +1,25 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import Modal from "../components/Modal/Modal";
+import Drawer from "../components/Drawer/Drawer";
 
 const meta = {
-  title: "Modal",
-  component: Modal,
+  title: "Drawer",
+  component: Drawer,
   parameters: {
     layout: "centered"
   },
   tags: ["autodocs"],
   args: { onClose: fn() },
   argTypes: {}
-} satisfies Meta<typeof Modal>;
+} satisfies Meta<typeof Drawer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const General: Story = {
   args: {
-    children: <p>"this is Modal!!!!"</p>,
-    title: "Modal",
+    content: <p>"this is Drawer!!!!"</p>,
     isOpen: true,
-    customStyles: ""
+    className: ""
   }
 };
