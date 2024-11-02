@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 
 const meta = {
   title: "Button",
@@ -25,7 +25,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Contained: Story = {
+export const Large: Story = {
   args: {
     variant: "primary",
     label: "Button",
@@ -33,4 +33,24 @@ export const Contained: Story = {
     disabled: false
   }
 };
+
+export const Medium: Story = {
+  args: {
+    variant: "secondary",
+    label: "Button",
+    size: "medium",
+    disabled: false
+  }
+};
+
+export const Small: Story = {
+  args: {
+    variant: "danger",
+    label: "Button",
+    size: "small",
+    disabled: false
+  }
+};
+
+
 
