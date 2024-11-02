@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const General: Story = {
   args: {
     label: "General",
-    placeholder:"General"
+    placeholder:"General",    
   }
 };
 
