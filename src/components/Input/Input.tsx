@@ -4,12 +4,14 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   placeholder?: string;
+  className?: string;
 }
 
 const Input: React.FC<InputProps> = ({
   label,
   error,
   placeholder,
+  className,
   ...props
 }) => {
   return (
@@ -23,7 +25,8 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         className={cn([
           "p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-          error ? "border-red-500" : "border-gray-300"
+          error ? "border-red-500" : "border-gray-300",
+          className
         ])}
         {...props}
       />

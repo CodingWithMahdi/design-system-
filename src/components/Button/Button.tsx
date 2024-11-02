@@ -6,11 +6,13 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "danger";
   size?: "small" | "medium" | "large";
   disabled?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
+  className,
   variant = "primary",
   size = "medium",
   disabled = false
@@ -33,7 +35,8 @@ const Button: React.FC<ButtonProps> = ({
         baseStyles,
         variantStyles[variant],
         sizeStyles[size],
-        disabled ? "opacity-50 cursor-not-allowed" : ""
+        disabled ? "opacity-50 cursor-not-allowed" : "",
+        className
       ])}
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
