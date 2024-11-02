@@ -1,4 +1,4 @@
-import {cn} from "../../utils/cn";
+import { cn } from "../../utils/cn";
 
 interface BadgeProps {
   text: string;
@@ -11,7 +11,8 @@ const Badge: React.FC<BadgeProps> = ({
   text,
   color = "default",
   icon,
-  className
+  className,
+  ...props
 }) => {
   const colorClasses = {
     default: "bg-gray-200 text-gray-800",
@@ -27,6 +28,7 @@ const Badge: React.FC<BadgeProps> = ({
         colorClasses[color],
         className
       ])}
+      {...props}
     >
       {icon && <span className="mr-1">{icon}</span>}
       {text}

@@ -15,7 +15,8 @@ const SnackBar: React.FC<SnackBarProps> = ({
   isOpen,
   duration = 3000,
   onClose,
-  className = ""
+  className = "",
+  ...props
 }) => {
   useEffect(() => {
     if (isOpen) {
@@ -31,6 +32,7 @@ const SnackBar: React.FC<SnackBarProps> = ({
         isOpen ? "translate-y-0" : "translate-y-96",
         className
       ])}
+      {...props}
     >
       <ExclamationCircleIcon className="mr-2 w-6 h-6 text-white" />
       {message}

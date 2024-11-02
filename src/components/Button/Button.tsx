@@ -15,7 +15,8 @@ const Button: React.FC<ButtonProps> = ({
   className,
   variant = "primary",
   size = "medium",
-  disabled = false
+  disabled = false,
+  ...props
 }) => {
   const baseStyles = "rounded-full focus:outline-none transition duration-200";
   const variantStyles = {
@@ -31,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      {...props}
       className={cn([
         baseStyles,
         variantStyles[variant],

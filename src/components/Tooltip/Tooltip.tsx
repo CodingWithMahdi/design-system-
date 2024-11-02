@@ -10,7 +10,8 @@ interface TooltipProps {
 const Tooltip: React.FC<TooltipProps> = ({
   text,
   children,
-  customClass = ""
+  customClass = "",
+  ...props
 }) => {
   const [visible, setVisible] = useState(false);
 
@@ -19,6 +20,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       className="inline-block relative"
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
+      {...props}
     >
       {children}
       {visible && (
