@@ -23,9 +23,9 @@ const ProgressBar: React.FC<LoadingCircleProps> = ({
       <div
         className={cn([
           "flex flex-col justify-center  rounded-full text-center  text-xs whitespace-nowrap transition duration-500 overflow-hidden",
-          color
+        //   color
         ])}
-        style={{ width: `${size}%` }}
+        style={{ width: `${size}%`, color:`${color}` }}
       ></div>
     </div>
   );
