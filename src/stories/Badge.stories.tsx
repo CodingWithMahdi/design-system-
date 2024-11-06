@@ -31,8 +31,8 @@ export const General: Story = {
 
 export const WithIcon: Story = {
   args: {
-    text: "5",
+    ...General.args,
     color: "error",
-    icon: <XCircleIcon className="w-6 h-6 text-gray-500" />
+    icon: <XCircleIcon className="w-6 h-6 text-red-700" />
   }
 };

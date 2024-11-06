@@ -36,21 +36,16 @@ export const Large: Story = {
 
 export const Medium: Story = {
   args: {
+    ...Large.args,
     variant: "secondary",
-    label: "Button",
-    size: "medium",
-    disabled: false
+    size: "medium"
   }
 };
 
 export const Small: Story = {
   args: {
+    ...Large.args,
     variant: "danger",
-    label: "Button",
-    size: "small",
-    disabled: false
+    size: "small"
   }
 };
-
-
-
