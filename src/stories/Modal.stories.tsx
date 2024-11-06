@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import Modal from "../components/Modal/Modal";
 
-const meta = {
+const meta: Meta<typeof Modal> = {
   title: "Modal",
   component: Modal,
   parameters: {
@@ -11,7 +11,7 @@ const meta = {
   tags: ["autodocs"],
   args: { onClose: fn() },
   argTypes: {}
-} satisfies Meta<typeof Modal>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

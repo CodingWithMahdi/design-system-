@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import Drawer from "../components/Drawer/Drawer";
 
-const meta = {
+const meta: Meta<typeof Drawer> = {
   title: "Drawer",
   component: Drawer,
   parameters: {
@@ -11,7 +11,7 @@ const meta = {
   tags: ["autodocs"],
   args: { onClose: fn() },
   argTypes: {}
-} satisfies Meta<typeof Drawer>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

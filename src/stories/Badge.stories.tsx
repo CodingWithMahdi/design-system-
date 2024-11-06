@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Badge from "../components/Badge/Badge";
 import { XCircleIcon } from "@heroicons/react/20/solid";
 
-const meta = {
+const meta: Meta<typeof Badge> = {
   title: "Badge",
   component: Badge,
   parameters: {
@@ -17,7 +17,7 @@ const meta = {
       control: { type: "select" }
     }
   }
-} satisfies Meta<typeof Badge>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

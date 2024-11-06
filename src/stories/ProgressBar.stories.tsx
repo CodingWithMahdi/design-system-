@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 
-const meta = {
+const meta: Meta<typeof ProgressBar> = {
   title: "ProgressBar",
   component: ProgressBar,
   parameters: {
@@ -10,7 +10,7 @@ const meta = {
   args: {},
   tags: ["autodocs"],
   argTypes: {}
-} satisfies Meta<typeof ProgressBar>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
