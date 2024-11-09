@@ -1,0 +1,8 @@
+import { Meta, ColorPalette, ColorItem, Title } from "@storybook/blocks";
+import { colors } from '../components/ColorPalette/ColorPalette.tsx'
+
+<Title>Colors</Title>
+## Our Colors in this system
+<ColorPalette>
+{Object.entries(colors).map(([name, value]) => (<ColorItem key={name} title={name} colors={value} /> ))}
+</ColorPalette>

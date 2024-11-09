@@ -9,7 +9,7 @@ const meta: Meta<typeof Button> = {
     layout: "centered"
   },
   tags: ["autodocs"],
-  args: { onClick: fn() },
+  args: { label: "Button", onClick: fn() },
   argTypes: {
     variant: {
       options: ["primary", "secondary", "danger"],
@@ -28,7 +28,6 @@ type Story = StoryObj<typeof meta>;
 export const Large: Story = {
   args: {
     variant: "primary",
-    label: "Button",
     size: "large",
     disabled: false
   }
