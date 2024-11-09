@@ -5,7 +5,7 @@ import {
   black,
   transparent,
   currentColor
-} from "./src/components/ColorPalette";
+} from './src/components/ColorPalette/ColorPalette';
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
