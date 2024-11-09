@@ -26,22 +26,22 @@ const meta: Meta<typeof TextArea> = {
     disabled: {
       name: "Disabled",
       control: "boolean",
-      description: "Disables the text area",
-    //   table: {
-    //     defaultValue: {
-    //       summary: false
-    //     }
-    //   }
+      description: "Disables the text area"
+      //   table: {
+      //     defaultValue: {
+      //       summary: false
+      //     }
+      //   }
     },
     required: {
       name: "Required",
       control: "boolean",
-      description: "Marks the text area as required",
-    //   table: {
-    //     defaultValue: {
-    //       summary: false
-    //     }
-    //   }
+      description: "Marks the text area as required"
+      //   table: {
+      //     defaultValue: {
+      //       summary: false
+      //     }
+      //   }
     }
   }
 };
